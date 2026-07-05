@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: finance_source  # یا هر نامی که برای سورس گذاشته‌اید
+    database: bigquery-public-data
+    schema: crypto_bitcoin
+    tables:
+      - name: transactions  # این نام باید دقیقاً با نام داخل فایل SQL یکی باشد

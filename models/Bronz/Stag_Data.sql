@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('finance_source', 'complaint_database') }}
