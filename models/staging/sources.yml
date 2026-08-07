@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: default
-    database: default   # یا نام کاتالوگ/دیتابیس شما در دیتابریکس
-    schema: default     # نام اسکیما که جدول برنز در آن قرار دارد
+  - name: nyctaxi_data
+    catalog: samples
+    schema: nyctaxi
     tables:
-      - name: TaxiData_Bronze
+      - name: trips
