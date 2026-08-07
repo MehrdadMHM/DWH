@@ -16,13 +16,8 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-# تنظیمات سراسری برای سازگاری با دیتابریکس غیر-یونیتی کاتالوگ
-config:
-  send_anonymous_usage_stats: false
-
 models:
   mehrdad_dbt_databricks:
-    # مشخص کردن مت‌استور پیش‌فرض برای جلوگیری از خطای Unity Catalog
     +catalog: hive_metastore
     
     staging:
