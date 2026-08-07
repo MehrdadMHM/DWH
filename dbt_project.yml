@@ -18,12 +18,7 @@ clean-targets:
 
 models:
   mehrdad_dbt_databricks:
-    +catalog: hive_metastore
-    
     staging:
       +materialized: view
-      +schema: default
-      
     vault:
       +materialized: incremental
-      +schema: default
