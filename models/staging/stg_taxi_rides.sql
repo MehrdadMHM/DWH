@@ -1,6 +1,7 @@
 {{
     config(
-        materialized='ephemeral'
+        materialized='table',
+        alias='stg_taxi_rides'
     )
 }}
 
