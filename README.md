@@ -1,15 +1,31 @@
-Welcome to your new dbt project!
+# dbt Databricks Data Vault
 
-### Using the starter project
+A practical Data Vault 2.0 implementation built with dbt and Databricks using NYC Taxi trip data.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Project Overview
 
+This project demonstrates how raw taxi data can be transformed into a scalable Data Vault model using dbt.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+The pipeline includes:
+
+- Staging and data standardization
+- Hash key generation
+- Hashdiff calculation
+- Incremental loading
+- Hubs, Links, and Satellites
+- PIT and status-tracking tables
+- dbt model lineage
+
+## Architecture
+
+```text
+NYC Taxi Source
+       ↓
+Staging Layer
+       ↓
+Data Vault Layer
+       ├── Hubs
+       ├── Links
+       ├── Satellites
+       ├── Status Tracking
+       └── PIT Tables
