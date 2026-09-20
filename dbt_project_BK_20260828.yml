@@ -20,8 +20,5 @@ models:
   mehrdad_dbt_databricks:
     staging:
       +materialized: view
-      +schema: staging          # همه مدل‌های این پوشه می‌روند در اسکیمای staging
-    Silver:
-      vault:
-        +materialized: incremental
-        +schema: raw_vault
+    vault:
+      +materialized: incremental
